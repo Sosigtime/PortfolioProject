@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <div class="heading">
+    <div class="container">
+      <h1 id="title">Survey Form</h1>
+      <h2 id="sub-title">Thank you for taking the time to help us improve the platform</h2>
+      <p id="description">Tell us what you think!</p>
+
+    </div>
+  </div>
+
+  <form id="survey-form">
+    <div class="personal-info">
+      <div class="container">
+        <ul class="personal-info__list">
+          <li>
+            <label for="name" id="name-label">Name</label>
+            <input type="text" class="personal-info__data" id="name" name="name" placeholder="Whats your Name?" required>
+          </li>
+          <li>
+            <label for="email" id="email-label">Email</label>
+            <input type="email" class="personal-info__data" id="email" name="email" placeholder="Whats your Email?" required>
+          </li>
+          <li>
+            <label for="number" id="number-label">Age</label>
+            <input type="number" class="personal-info__data" id="number" name="age" min="1" max="115" placeholder="How old are you?" required>
+          </li>
+          <li>
+            <label for="number" id="number-label">What's your current occupation?</label>
+            <input type="text" class="personal-info__data" id="occupation" name="occupation" placeholder="What's your current occupation?" required>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="friend">
+        <div class="container">
+          <h3>Would you recommend PurpleBeard to a friend?</h3>
+          <select id="dropdown" name="Yes, I would">
+            <option value="yes, I would">Yes, I would</option>
+            <option value="No, I wouldn't">No, I wouldn't</option>
+            <select id="dropdown" name="I don't know">
+              <option value="I don't know">I don't know</option>
+            </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="Courses">
+        <div class="container">
+          <h3>Which courses are you interested in finding out more about?</h3>
+          <select id="courses" name="courses">
+            <optgroup label="courses">
+              <option value="p">Python</option>
+              <option value="C"> CSS</option>
+              <option value="FE"> FrontEndDev</option>
+              <option value="b"> BackEndDev</option>
+
+            </optgroup>
+          </select>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="options">
+          <fieldset>
+            <legend>
+              <h3>Contact option? (choose one)</h3>
+            </legend>
+            <ul class="Contact">
+              <li>
+                <label for="Phonee">Phone
+                  <input type="radio" name="new-options" id="phone" value="phone">
+                </label>
+              </li>
+              <li>
+                <label for="Email">Email
+                  <input type="radio" name="new-options" id="Email" value="Email">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <!--ends options-->
+      </div>
+      <!--ends container-->
+
+      <div class="Social Media">
+        <h3>Do you follow us on Twitter?</h3>
+        <ul class="preferences">
+          <li>
+            <label for="Yes"> Yes <input type="checkbox" id="yes" name="yes" value="yes"></label>
+          </li>
+
+          <li>
+            <label for="no"> No
+              <input type="checkbox" id="No" name="preference" value="No"></label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <footer class="comments">
+          <label for="comments">Have a suggestion? We would love to hear your feedback!</label>
+
+          <textarea id="comments"></textarea>
+          <button type="submit" id="submit" value="submit">Submit</button>
+        </footer>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.pagebg {
+  background-color: #f2edce;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  color: #f2edce;
+}
+
+h3 {
+  font-family: "Oswald", sans-serif;
+}
+
+/*first secttion*/
+
+.heading {
+  background-color: #3d393a;
+  padding: 3em;
+  text-align: center;
+}
+
+#title {
+  font-family: "Oswald", sans-serif;
+  font-size: 50px;
+  line-height: 1.2em;
+  color: #f2edce;
+}
+
+#sub-title {
+  margin-top: 1em;
+}
+
+#description {
+  color: #c9c7bf;
+}
+
+.img {
+  width: 200px;
+  height: auto;
+  max-width: 100%;
+  margin: 1em;
+}
+
+/*second section*/
+
+.personal-info {
+  background-color: #74a4e3;
+  color: #f2edce;
+  padding: 1.5em 0;
+}
+
+.personal-info__list {
+  list-style: none;
+  line-height: 1.7em;
+  font-family: "Oswald", sans-serif;
+  font-size: 21px;
+}
+
+/*size of data box*/
+.personal-info__data {
+  width: 270px;
+  border-radius: 5px;
+  height: 21px;
+}
+
+/*third section*/
+
+.friend {
+  padding: 5px 0;
+  margin: 20px 0;
+}
+
+select {
+  width: 260px;
+}
+
+.options {
+  padding: 20px 0;
+}
+
+.courses {
+  list-style: none;
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+.imgfood {
+  width: 270px;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: 0; /*removes border around radio    options*/
+}
+
+legend {
+  font-family: "Oswald", sans-serif;
+}
+
+.diet {
+  padding: 30px 0;
+}
+
+/*checkbox style*/
+.preferences {
+  list-style: none;
+  line-height: 30px;
+  padding: 20px 0;
+}
+
+/*comments box*/
+#comments {
+  width: 280px;
+  height: 200px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.comments {
+  padding: 20px 0;
+  font-family: "Oswald", sans-serif;
+}
+
+#submit {
+  color: #f2f2f2;
+  display: inline-block;
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: #74a4e3;
+  padding: 0.5em 1.5em;
+  border-radius: 100px;
+}
+
+@media (min-width: 800px) {
+  h1 {
+    font-size: 75px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .heading {
+    padding: 1em;
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 700px;
+    max-width: 1100px;
+  }
+
+  .wrapper {
+    width: 800px;
+    background-color: #faf8eb;
+    margin: 0 auto;
+    padding: 1em 0;
+  }
+
+  #title {
+    font-size: 76px;
+  }
+
+  #sub-title {
+    font-size: 35px;
+  }
+
+  .personal-info {
+    padding: 1em;
+  }
+
+  .personal-info__list {
+    font-size: 27px;
+  }
+
+  .personal-info__data {
+    height: 27px;
+    font-size: 16px;
+  }
+
+  #description {
+    line-height: 1.5em;
+    margin-top: 1em;
+  }
+
+  .flight-details {
+    padding: 1em 0 0 0;
+    margin: 0;
+  }
+
+  .options {
+    padding: 4em 0 0 0;
+    margin: 0;
+  }
+
+  .imgfood {
+    width: 600px;
+    max-width: 100%;
+  }
+
+  #comments {
+    width: 600px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+}
